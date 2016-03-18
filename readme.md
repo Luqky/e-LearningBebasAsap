@@ -25,10 +25,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-"# e-LearningBebasAsap"
 
+## Step By Step Project Installation
 
-Step By Step Project Installation
  - install composer
  - install git
  - pastikan kedua program tersebut sudah masuk di path pada environment variable
@@ -37,3 +36,7 @@ Step By Step Project Installation
  - git clone https://github.com/bebasasap/e-LearningBebasAsap.git
  - cd e-LearningBebasAsap/
  - composer install
+ - git config --global user.name <name>
+ - git config --global user.email <email>
+
+"# e-LearningBebasAsap"
