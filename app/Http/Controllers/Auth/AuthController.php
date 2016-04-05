@@ -8,6 +8,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
+use App\Http\Requests;
+use Illuminate\Http\Request;
+
 class AuthController extends Controller
 {
     /*
@@ -28,7 +31,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new authentication controller instance.
@@ -49,9 +52,21 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
+          'firstname' => 'required|max:255',
+          'lastname' => 'required|max:255',
+          'birthday' => 'required',
+          'username' => 'required|min:6|max:255|unique:users',
+          'email' => 'required|email|max:255|unique:users',
+          'password' => 'required|min:6',
+        ]);
+    }
+
+    protected function qvalidator(array $data)
+    {
+        return Validator::make($data, [
+          'username' => 'required|min:6|max:255|unique:users',
+          'email' => 'required|email|max:255|unique:users',
+          'password' => 'required|min:6',
         ]);
     }
 
@@ -64,9 +79,45 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+          'firstname' => $data['firstname'],
+          'lastname' => $data['lastname'],
+          'birthday' => $data['birthday'],
+          'username' => $data['username'],
+          'email' => $data['email'],
+          'password' => bcrypt($data['password']),
         ]);
     }
+
+    protected function qcreate(array $data)
+    {
+        return User::create([
+          'username' => $data['username'],
+          'email' => $data['email'],
+          'password' => bcrypt($data['password']),
+        ]);
+    }
+
+    protected function quick_register(Request $request)
+    {
+      $data = $request->all();
+      $validator = AuthController::qvalidator($data);
+      if ($validator->fails()) {
+          return redirect('/')
+                      ->withErrors($validator)
+                      ->withInput();
+      }
+      AuthController:: qcreate($data);
+      return AuthController::postLogin($request);
+    }
+
+    // user after login based on its role
+    protected function authenticated($request, $user)
+    {
+      if ($user->admin) {
+        return redirect()->intended('/admin');
+      }
+      return redirect()->intended('/home');
+    }
+
+
 }
