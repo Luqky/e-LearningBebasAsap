@@ -11,27 +11,31 @@
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
+
+
     Route::post('/quick-register', 'Auth\AuthController@quick_register');
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('/', 'HomeController@beranda');
+    Route::get('/kursus', 'HomeController@kursus');
+    Route::get('/kami', 'HomeController@kami');
+    Route::get('/masuk', 'HomeController@masuk');
+    Route::get('/daftar', 'HomeController@daftar');
 
-    Route::get('/home', 'HomeController@index');
+    Route::group(['middleware' => 'auth'], function()
+    {
+      Route::get('/dashboard', function() {
+        return view('user.index');
+      });
+    });
 
     Route::group(['middleware' => 'admin'], function()
     {
-      Route::get('/admin', 'AdminController@index');
+      Route::get('/admin', function() {
+        return views('administrator');
+      });
     });
 });

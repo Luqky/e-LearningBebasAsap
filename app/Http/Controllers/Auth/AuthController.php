@@ -31,7 +31,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/login';
 
     /**
      * Create a new authentication controller instance.
@@ -57,7 +57,7 @@ class AuthController extends Controller
           'birthday' => 'required',
           'username' => 'required|min:6|max:255|unique:users',
           'email' => 'required|email|max:255|unique:users',
-          'password' => 'required|min:6',
+          'password' => 'required|min:6|confirmed',
         ]);
     }
 
@@ -66,7 +66,7 @@ class AuthController extends Controller
         return Validator::make($data, [
           'username' => 'required|min:6|max:255|unique:users',
           'email' => 'required|email|max:255|unique:users',
-          'password' => 'required|min:6',
+          'password' => 'required|min:6|confirmed',
         ]);
     }
 
@@ -107,7 +107,7 @@ class AuthController extends Controller
                       ->withInput();
       }
       AuthController:: qcreate($data);
-      return AuthController::postLogin($request);
+      return redirect()->intended('/login');
     }
 
     // user after login based on its role
@@ -116,7 +116,7 @@ class AuthController extends Controller
       if ($user->admin) {
         return redirect()->intended('/admin');
       }
-      return redirect()->intended('/home');
+      return redirect()->intended('/dashboard');
     }
 
 
