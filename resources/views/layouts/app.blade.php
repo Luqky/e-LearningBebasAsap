@@ -45,6 +45,11 @@
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/kursus') }}">Kursus</a></li>
+                    <li><a href="{{ url('/kami') }}">Tentang Kami</a></li>
+                </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
@@ -60,8 +65,8 @@
                             </ul>
                         </li>
                     @else
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li><a href="{{ url('/login') }}">Masuk</a></li>
+                        <li><a href="{{ url('/register') }}">Daftar</a></li>
                     @endif
                 </ul>
             </div>

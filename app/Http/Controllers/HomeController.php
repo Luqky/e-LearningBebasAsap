@@ -4,25 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+USE App\Course;
 
 class HomeController extends Controller
 {
 
     public function beranda()
     {
-        return view('beranda');
+        $course = Course::select('*') -> orderBy('course_id','asc')->get();
+        return view('beranda',[
+          'course' => $course
+        ]);
     }
     public function kursus()
     {
-        return view('kursus');
-    }
-    public function masuk()
-    {
-        return view('login');
-    }
-    public function daftar()
-    {
-        return view('register');
+        $course = Course::select('*') -> orderBy('course_id','asc')->get();
+        return view('kursus',[
+          'course' => $course
+        ]);
     }
     public function kami()
     {

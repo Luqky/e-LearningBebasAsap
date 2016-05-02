@@ -22,8 +22,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/', 'HomeController@beranda');
     Route::get('/kursus', 'HomeController@kursus');
     Route::get('/kami', 'HomeController@kami');
-    Route::get('/masuk', 'HomeController@masuk');
-    Route::get('/daftar', 'HomeController@daftar');
 
     Route::group(['middleware' => 'auth'], function()
     {
@@ -35,7 +33,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::group(['middleware' => 'admin'], function()
     {
       Route::get('/admin', function() {
-        return views('administrator');
+        return views('administrator.index');
       });
     });
 });

@@ -93,7 +93,6 @@
                                 @endif
                             </div>
                         </div>
-                        {{--
                         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Confirm Password</label>
 
@@ -107,7 +106,6 @@
                                 @endif
                             </div>
                         </div>
-                        --}}
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
