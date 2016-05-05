@@ -1,0 +1,161 @@
+html {
+  height: 100%;
+  box-sizing: border-box; }
+
+body {
+  position: relative;
+  padding-bottom: 230px;
+  min-height: 100%; }
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+#elearning-bebasasap .navbar {
+  margin-bottom: 0px; }
+
+@media screen and (min-width: 1200px) {
+  #elearning-bebasasap .main-nav {
+    height: 160px;
+    background-color: white;
+    padding-top: 50px; } }
+
+@media screen and (min-width: 1200px) {
+  #elearning-bebasasap .list-menu {
+    padding-right: 100px; }
+    #elearning-bebasasap .list-menu li {
+      min-width: 115px;
+      text-align: center; } }
+
+@media screen and (min-width: 1200px) {
+  #elearning-bebasasap .footer-content {
+    min-height: 230px;
+    background-color: #009933; }
+    #elearning-bebasasap .footer-content ul {
+      list-style: none;
+      position: absolute;
+      top: 170px;
+      padding-left: 0px; }
+      #elearning-bebasasap .footer-content ul li {
+        display: inline-block; }
+    #elearning-bebasasap .footer-content .right-footer {
+      color: white;
+      position: absolute;
+      top: 170px;
+      right: 15px; } }
+
+#main-banner .wrapper {
+  min-height: 320px;
+  background-color: #009933;
+  text-align: center; }
+
+@media screen and (min-width: 1200px) {
+  #main-banner .btn {
+    padding-top: 10px;
+    border-radius: 8px;
+    border: none; }
+  #main-banner .btn-daftar {
+    margin-top: 180px;
+    min-width: 150px;
+    height: 52px;
+    background-color: #ff6633;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0px 52px 16px 30px rgba(0, 0, 0, 0.25) inset; } }
+
+#main-features .wrapper {
+  text-align: center;
+  min-height: 316px;
+  padding-top: 20px; }
+  #main-features .wrapper .title-features {
+    margin-bottom: 50px; }
+  #main-features .wrapper .fa {
+    color: #ff6633; }
+  #main-features .wrapper ul {
+    padding-left: 0px;
+    list-style: none; }
+    #main-features .wrapper ul li {
+      display: inline-block;
+      margin: 5px 15px;
+      min-width: 230px;
+      text-align: left; }
+
+#main-quotation .wrapper {
+  min-height: 350px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  #main-quotation .wrapper .quotation-content {
+    font-style: italic;
+    font-weight: bold; }
+
+#main-courses .wrapper {
+  padding-top: 30px;
+  min-height: 715px;
+  background-color: #009933;
+  color: white; }
+  @media screen and (min-width: 1200px) {
+    #main-courses .wrapper .course-preview {
+      padding: 10px 50px; } }
+  #main-courses .wrapper .course-thumbnail {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 260px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
+  #main-courses .wrapper .course-title {
+    margin-bottom: 30px; }
+
+#main-quick-register .wrapper {
+  text-align: center;
+  min-height: 370px;
+  padding-top: 40px; }
+  #main-quick-register .wrapper .title {
+    margin-bottom: 60px; }
+  #main-quick-register .wrapper .form-inputs {
+    margin-bottom: 50px; }
+    @media screen and (min-width: 1200px) {
+      #main-quick-register .wrapper .form-inputs input {
+        margin: 0px 30px;
+        min-width: 210px;
+        border-radius: 0px; } }
+    #main-quick-register .wrapper .form-inputs .form-control {
+      border: 1px solid rgba(62, 62, 62, 0.57); }
+  #main-quick-register .wrapper .form-buttons {
+    margin-bottom: 60px; }
+    #main-quick-register .wrapper .form-buttons .btn {
+      padding-top: 4px;
+      border-radius: 8px;
+      border: none; }
+    #main-quick-register .wrapper .form-buttons .btn-daftar {
+      min-width: 150px;
+      height: 52px;
+      background-color: #ff6633;
+      color: white;
+      font-size: 20px;
+      box-shadow: 0px 52px 16px 30px rgba(0, 0, 0, 0.25) inset; }
+
+#main-footer .wrapper {
+  margin-bottom: 40px; }
+  #main-footer .wrapper .title {
+    margin-bottom: 50px; }
+  #main-footer .wrapper .media-sosial .content {
+    padding-left: 40px; }
+  #main-footer .wrapper ul {
+    list-style: none;
+    padding-left: 0px; }
+  #main-footer .wrapper ul li ul {
+    padding-left: 5px; }
+
+/*# sourceMappingURL=app.css.map */

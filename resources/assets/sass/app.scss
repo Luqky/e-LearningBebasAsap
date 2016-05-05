@@ -1,2 +1,49 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+// variables
+$header_height: 160px;
+$footer_height: 230px;
+$green: #009933;
+$orange: #ff6633;
+$gray: #333;
+
+//globals
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  padding-bottom: $footer_height;
+  min-height: 100%;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// mixins
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin verticaly-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@import 'layouts';
+@import "mainpage";
