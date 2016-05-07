@@ -8,7 +8,7 @@
 
   <section id="main-banner">
     <div class="wrapper">
-      <a href="#" class="btn btn-default btn-daftar">Daftar</a>
+      <a href="#quick-register" class="btn btn-default btn-daftar">Daftar</a>
     </div>
   </section>
 
@@ -78,19 +78,49 @@
   </section>
 
   <section id="main-quick-register">
-    <div class="wrapper">
+    <div class="wrapper" id="quick-register">
       <div class="container">
         <div class="title">
           <h2>Tertarik Dengan Kursus Bebas Asap?</h2>
         </div>
         <div class="form-register">
-          {{-- TODO: add form here --}}
-          <form class="form-inline" action="#" method="post">
+
+          <form class="form-inline" action="{{url('/quick-register')}}" method="post">
+            {!! csrf_field() !!}
+
             <div class="form-inputs">
-              <input class="form-control" type="text" name="username" value="" placeholder="Username">
-              <input class="form-control" type="text" name="email" value="" placeholder="E-mail">
-              <input class="form-control" type="text" name="password" value="" placeholder="Password">
-              <input class="form-control" type="text" name="re-password" value="" placeholder="Re-enter Password">
+              <div class="form-group{{$errors->has('username') ? ' has-error' : ''}}">
+                <input class="form-control" type="text" name="username" value="{{old('username')}}" placeholder="Username">
+                @if ($errors->has('username'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('username') }}</strong>
+                    </span>
+                @endif
+              </div>
+              <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                <input class="form-control" type="text" name="email" value="{{ old('email') }}" placeholder="E-mail">
+                @if ($errors->has('email'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                @endif
+              </div>
+              <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                <input class="form-control" type="password" name="password" value="" placeholder="Password">
+                @if ($errors->has('password'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('password') }}</strong>
+                    </span>
+                @endif
+              </div>
+              <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+                <input class="form-control" type="password" name="password_confirmation" value="" placeholder="Re-enter Password">
+                @if ($errors->has('password_confirmation'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('password_confirmation') }}</strong>
+                    </span>
+                @endif
+              </div>
             </div>
             <div class="form-buttons">
               <input class="btn btn-default btn-daftar" type="submit" name="register" value="Ya, Saya Tertarik">
@@ -158,6 +188,8 @@
             <h3 class="title">Feed Twitter</h3>
             <div class="content">
               {{-- TODO: add twitter feed here  --}}
+              <a class="twitter-timeline" href="https://twitter.com/bebasasaporg" data-widget-id="727245910187511809" width="220px" height="275px" data-chrome="noheader nofooter">Tweets by @bebasasaporg</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
           </div>
         </div>

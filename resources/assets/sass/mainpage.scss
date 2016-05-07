@@ -122,6 +122,10 @@
         }
       }
 
+      .form-group {
+        min-height: 70px;
+      }
+
       .form-control {
         border: 1px solid rgba(62, 62, 62, 0.57)
       }
@@ -169,5 +173,12 @@
     ul li ul {
       padding-left: 5px;
     }
+  }
+}
+
+#login {
+  .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }

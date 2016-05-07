@@ -102,12 +102,12 @@ class AuthController extends Controller
       $data = $request->all();
       $validator = AuthController::qvalidator($data);
       if ($validator->fails()) {
-          return redirect('/')
+          return redirect('/home')
                       ->withErrors($validator)
                       ->withInput();
       }
-      AuthController:: qcreate($data);
-      return redirect()->intended('/login');
+      AuthController::qcreate($data);
+      return redirect()->intended('/login')->with('register_message', 'Registration Success');
     }
 
     // user after login based on its role
