@@ -110,6 +110,19 @@ class AuthController extends Controller
       return redirect()->intended('/login')->with('register_message', 'Registration Success');
     }
 
+    protected function register(Request $request)
+    {
+      $data = $request->all();
+      $validator = AuthController::qvalidator($data);
+      if ($validator->fails()) {
+          return redirect('/register')
+                      ->withErrors($validator)
+                      ->withInput();
+      }
+      AuthController::create($data);
+      return redirect()->intended('/login')->with('register_message', 'Registration Success');
+    }
+
     // user after login based on its role
     protected function authenticated($request, $user)
     {

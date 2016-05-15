@@ -16,6 +16,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
 
+    Route::post('/register', 'Auth\AuthController@register');
 
     Route::post('/quick-register', 'Auth\AuthController@quick_register');
 
