@@ -60,6 +60,7 @@
                   <li><a href="{{url('/tentangkami')}}">Tentang Kami</a></li>
                   <li><a href="{{url('/login')}}">Masuk</a></li>
                   <li><a href="{{url('/register')}}">Daftar</a></li>
+                  <li><a href="{{url('/logout')}}">Keluar</a></li>
                     <!-- Authentication Links -->
                     {{-- @if (Auth::check())
                         <li class="dropdown">
