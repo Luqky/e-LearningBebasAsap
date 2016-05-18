@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>@yield('title')</title>
 
     <!-- Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="css/app.css">
 
     <style>
         body {
@@ -26,7 +27,8 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default">
+  <div id="elearning-bebasasap">
+    <nav class="navbar navbar-default main-nav">
         <div class="container">
             <div class="navbar-header">
 
@@ -40,19 +42,22 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    <img class="img" src="" alt="[company logo]" />
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
+                {{-- <ul class="nav navbar-nav">
                     <li><a href="{{ url('/kursus') }}">Kursus</a></li>
                     <li><a href="{{ url('/kami') }}">Tentang Kami</a></li>
-                </ul>
+                </ul> --}}
 
                 <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right list-menu">
+                  <li><a href="{{url('/')}}">Beranda</a></li>
+                  <li><a href="{{url('/kursus')}}">Kursus</a></li>
+                  <li><a href="{{url('/kami')}}">Tentang Kami</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::check())
                         <li class="dropdown">
@@ -73,11 +78,36 @@
         </div>
     </nav>
 
-    @yield('content')
+    <section id="main-content">
+      @yield('content')
+    </section>
 
-    <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    <footer>
+      <div class="footer-content">
+        <div class="container">
+          <div class="col-md-6 ">
+            <div class="left-footer">
+              <ul>
+                <li><img class="img img-responsive" src="" alt="[logo 1]" /></li>
+                <li><img class="img img-responsive" src="" alt="[logo 2]" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 ">
+            <div class="right-footer">
+              <p>Copyright (c) {{date('Y')}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JavaScripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+  <script src="js/all.js"></script>
 </body>
 </html>

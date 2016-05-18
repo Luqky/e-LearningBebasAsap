@@ -37,10 +37,4 @@ Route::group(['middleware' => 'web'], function () {
         return views('administrator.index');
       });
     });
-
-    // ---- for front end test purpose -----------
-    Route::get('/home', function()
-    {
-      return view('pages.home');
-    });
 });
