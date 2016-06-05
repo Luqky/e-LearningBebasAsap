@@ -14,11 +14,7 @@
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
-
-
-
     Route::post('/quick-register', 'Auth\AuthController@quick_register');
-
     Route::get('/', 'HomeController@beranda');
     Route::get('/kursus', 'HomeController@kursus');
     Route::get('/kami', 'HomeController@kami');

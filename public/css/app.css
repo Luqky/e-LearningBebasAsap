@@ -1,3 +1,448 @@
+body {
+    overflow-x: hidden;
+    font-family: "Open Sans";
+}
+
+.text-muted {
+    color: #777;
+}
+
+.text-primary {
+    color: #093;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+p.large {
+    font-size: 16px;
+}
+
+a,a:hover,a:focus,a:active,a.active {
+    outline: 0;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover,a:focus,a:active,a.active {
+    color: #009933;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Open Sans";
+    /* text-transform: uppercase; */
+    font-weight: 700;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
+.bg-light-gray {
+    background-color: #f7f7f7;
+}
+
+.bg-darkest-gray {
+    background-color: #fff;
+}
+
+.bg-green{
+    background-color: #009933;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #093;
+    border-color: #093;
+    font-family: Montserrat,"Open Sans";
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #009933;
+    border-color: #f6bf01;
+}
+
+.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled,.btn-primary[disabled],fieldset[disabled] .btn-primary,.btn-primary.disabled:hover,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary:hover,.btn-primary.disabled:focus,.btn-primary[disabled]:focus,fieldset[disabled] .btn-primary:focus,.btn-primary.disabled:active,.btn-primary[disabled]:active,fieldset[disabled] .btn-primary:active,.btn-primary.disabled.active,.btn-primary[disabled].active,fieldset[disabled] .btn-primary.active {
+    background-color: #093;
+    border-color: #093;
+}
+
+.btn-primary .badge {
+    color: #093;
+    background-color: #fff;
+}
+
+.btn-xl {
+    color: #fff;
+    background-color: #ee591f;
+    border-color: #093;
+    font-family: "Open Sans";
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 20px 40px;
+}
+
+.btn-xl:hover,.btn-xl:focus,.btn-xl:active,.btn-xl.active,.open .dropdown-toggle.btn-xl {
+    color: #fff;
+    background-color: #009933;
+    border-color: #f6bf01;
+}
+
+.btn-xl:active,.btn-xl.active,.open .dropdown-toggle.btn-xl {
+    background-image: none;
+}
+
+.btn-xl.disabled,.btn-xl[disabled],fieldset[disabled] .btn-xl,.btn-xl.disabled:hover,.btn-xl[disabled]:hover,fieldset[disabled] .btn-xl:hover,.btn-xl.disabled:focus,.btn-xl[disabled]:focus,fieldset[disabled] .btn-xl:focus,.btn-xl.disabled:active,.btn-xl[disabled]:active,fieldset[disabled] .btn-xl:active,.btn-xl.disabled.active,.btn-xl[disabled].active,fieldset[disabled] .btn-xl.active {
+    background-color: #093;
+    border-color: #093;
+}
+
+.btn-xl
+.badge {
+    color: #093;
+    background-color: #fff;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border-color: transparent;
+}
+
+.navbar-default .navbar-brand {
+    width:350px;
+    height: 80px;
+    background-image: url(../images/logos/mainlogo.png);
+    position: center;
+    background-repeat: no-repeat;
+    margin:5px 0 0 5px;
+}
+
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand.active {
+    color: #009933;
+}
+
+.navbar-default
+.navbar-collapse {
+    border-color: rgba(255,255,255,.02);
+}
+
+.navbar-default
+.navbar-toggle {
+    background-color: #093;
+    border-color: #093;
+}
+
+.navbar-default .navbar-toggle
+.icon-bar {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,.navbar-default
+.navbar-toggle:focus {
+    background-color: #093;
+}
+
+.navbar-default .nav li a {
+    font-family: "Open Sans";
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.navbar-default .nav li a:hover,.navbar-default .nav li a:focus {
+    color: #093;
+    outline: 0;
+}
+
+.navbar-default
+.navbar-nav>.active>a {
+    border-radius: 0;
+    color: #000;
+    background-color: #fff;
+}
+
+.navbar-default
+.navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
+    color: #000;
+    background-color: #fff;
+}
+
+@media (min-width:768px) {
+    .navbar-default {
+        background-color: #fff;
+        padding: 25px 0;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+        border: 0;
+    }
+
+    .navbar-default .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-default .navbar-nav>.active>a {
+        border-radius: 3px;
+    }
+
+    .navbar-default.navbar-shrink {
+        background-color: #fff;
+        padding: 10px 0;
+    }
+
+    .navbar-default.navbar-shrink
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+}
+
+header {
+    background-image: url(../images/header-bg.jpg);
+    background-repeat: none;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+header .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+header .intro-text
+.intro-lead-in {
+    font-family: "Open Sans";
+    font-style: italic;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+
+header .intro-text
+.intro-heading {
+    font-family: ""Open Sans";"
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 25px;
+}
+
+@media (min-width:768px) {
+    header .intro-text {
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }
+
+    header
+    .intro-text .intro-lead-in {
+        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-style: italic;
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 25px;
+    }
+
+    header .intro-text
+    .intro-heading {
+        font-family: "Open Sans";
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 75px;
+        margin-bottom: 50px;
+    }
+}
+
+section {
+    padding: 100px 0;
+}
+
+section h2.section-heading {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+section h3.section-subheading {
+    font-size: 16px;
+    font-family: "Open Sans";
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 75px;
+}
+
+
+section#quotation {
+  background-image: url(../images/nadella.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+section#contact {
+    background-color: #fff;
+    background-image: url(../images/map-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+section#contact .section-heading {
+    color: #000;
+}
+
+section#contact
+.form-group {
+    margin-bottom: 25px;
+}
+
+section#contact .form-group input,section#contact
+.form-group textarea {
+    padding: 20px;
+}
+
+section#contact .form-group input.form-control {
+    height: auto;
+}
+
+section#contact .form-group textarea.form-control {
+    height: 236px;
+}
+
+section#contact
+.form-control:focus {
+    border-color: #093;
+    box-shadow: none;
+}
+
+section#contact ::-webkit-input-placeholder {
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact :-moz-placeholder {
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact ::-moz-placeholder {
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact :-ms-input-placeholder {
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact .text-danger {
+    color: #e74c3c;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+    background-color: #009933;
+}
+
+footer span.copyright {
+    line-height: 100px;
+    font-family: "Open Sans";
+    color: #fff;
+    text-transform: none;
+}
+
+footer ul.quicklinks {
+    margin-bottom: 0;
+    line-height: 40px;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    text-transform: none;
+}
+
+ul.social-buttons {
+    margin-bottom: 0;
+}
+
+ul
+.social-buttons li a {
+    display: block;
+    background-color: #000;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+    outline: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+ul.social-buttons li a:hover,ul.social-buttons li a:focus,ul.social-buttons li a:active {
+    background-color: #c4ffd8;
+}
+
+.btn:focus,.btn:active,.btn.active,.btn:active:focus {
+    outline: 0;
+}
+
+
+::-moz-selection {
+    text-shadow: none;
+    background: #093;
+}
+
+::selection {
+    text-shadow: none;
+    background: #3297FD;
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: #093;
+}
+
+/* app.css */
+
 html {
   height: 100%;
   box-sizing: border-box; }
@@ -57,13 +502,16 @@ footer {
     border-radius: 8px;
     border: none; }
   #main-banner .btn-daftar {
-    margin-top: 180px;
-    min-width: 150px;
-    height: 52px;
-    background-color: #ff6633;
-    color: white;
-    font-size: 20px;
-    box-shadow: 0px 52px 16px 30px rgba(0, 0, 0, 0.25) inset; } }
+    color: #fff;
+    background-color: #ee591f;
+    border-color: #093;
+    font-family: "Open Sans";
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 20px 40px;
+
+     } }
 
 #main-features .wrapper {
   text-align: center;
@@ -141,12 +589,14 @@ footer {
       border-radius: 8px;
       border: none; }
     #main-quick-register .wrapper .form-buttons .btn-daftar {
-      min-width: 150px;
-      height: 52px;
-      background-color: #ff6633;
-      color: white;
-      font-size: 20px;
-      box-shadow: 0px 52px 16px 30px rgba(0, 0, 0, 0.25) inset; }
+      color: #fff;
+      background-color: #ee591f;
+      border-color: #093;
+      font-family: "Open Sans";
+      font-weight: 700;
+      border-radius: 3px;
+      font-size: 18px;
+      padding: 20px 40px; }
 
 #main-footer .wrapper {
   margin-bottom: 40px; }
@@ -163,5 +613,3 @@ footer {
 #login .container {
   margin-top: 40px;
   margin-bottom: 40px; }
-
-/*# sourceMappingURL=app.css.map */
